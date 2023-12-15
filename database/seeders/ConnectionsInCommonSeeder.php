@@ -18,10 +18,12 @@ class ConnectionsInCommonSeeder extends Seeder
         $senderIds = [1, 4, 1, 1, 11, 2, 13, 10, 14, 1, 1, 1];
         $receiverIds = [4, 11, 10, 11, 13, 15, 14, 10, 4, 13, 15, 10];
 
-        foreach ($senderIds as $senderId) {
+        foreach ($senderIds as $key => $senderId) {
+            $receiverId = $receiverIds[$key];
+
             Connection::create([
                 'sender_id' => $senderId,
-                'receiver_id' => $receiverIds,
+                'receiver_id' => $receiverId,
                 'accepted' => 1
             ]);
         }
