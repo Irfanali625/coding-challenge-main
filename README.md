@@ -137,3 +137,12 @@ Further requirements:
 
 - Please check again if all requirements have been done as described. If there are things that need explanation, add them as a text message in your repository (Github  Conversations).
 - Reply to a mail containing a link to a private repository with your code or a zip file.
+
+- To run the project
+    - composer install
+    - php artisan migrate
+    - php artisan db:seed
+    - npm install
+    - npm run watch
+    - php artisan serve
+
